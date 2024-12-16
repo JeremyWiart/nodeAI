@@ -1,5 +1,5 @@
 const showLanding = require('./Controllers/landingController');
-const {showLogin,formLogin} = require('./Controllers/userController');
+const {showLogin,showRegister,formLogin} = require('./Controllers/userController');
 const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
@@ -16,3 +16,5 @@ app.get('/', showLanding);
 
 app.get('/login',showLogin);
 app.post('/login',formLogin);
+
+app.get('/register',showRegister);

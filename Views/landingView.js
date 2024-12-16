@@ -28,8 +28,9 @@ function landingView(){
                 <form action="/login" method="GET">
                     <button type="submit" id="login-btn" class="text-blue-800 font-semibold">Connexion</button>
                 </form>
-
+                <form action="/register" method="GET">    
                     <button id="register-btn" class="text-blue-800 font-semibold">Registration</button>
+                </form>
             </div>
 
             

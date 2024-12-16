@@ -1,3 +1,5 @@
+const headerView = require('./headerView');
+
 function registerView(){
 
     return `<!DOCTYPE html>
@@ -27,7 +29,7 @@ function registerView(){
                 <button id="register-btn" class="text-blue-800 font-semibold">Registration</button>
             </div>
 
-            <section id="register-section" class="p-4 hidden">
+            <section id="register-section" class="p-4">
                 <h2 class="text-2xl font-bold text-center mb-4">Registration</h2>
                 <form action="#" method="POST">
                    
