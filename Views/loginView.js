@@ -16,33 +16,35 @@ function loginView(){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" />
 </head>
 
-<body class="bg-gradient-to-r from-black to-blue-900">
+<body class="bg-gradient-to-r from-blue-900 via-black to-blue-900">
 
     
     
     ${headerView()};
     <main class="flex items-center justify-center p-48 mb-2 mt-2 rounded-lg">
-        <div class="bg-white shadow-md rounded-lg w-full max-w-lg min-w-max">
+        <div class="bg-gradient-to-r from-black via-blue-900 to-black shadow-md rounded-lg w-full max-w-lg min-w-max">
 
             <div class="flex justify-around flex-wrap bg-gray-200 p-4 rounded-t-lg">
-                <button id="login-btn" class="text-blue-800 font-semibold">Connexion</button>
-                <button id="register-btn" class="text-blue-800 font-semibold">Registration</button>
+                <form action="/register" methode="GET">
+                    <button id="register-btn" class="text-blue-800 font-semibold">Registration</button>
+                </form>
             </div>
 
             
             <section id="login-section" class="m-2 p-4">
-                <h2 class="text-2xl font-bold text-center mb-4">Connexion</h2>
+
+                <h2 class="text-2xl font-bold text-center text-red-600 mb-4 border border-red-600 rounded-lg p-1">Login</h2>
                 <form action="#" method="POST">
          
                     <div class="mb-4">
-                        <label for="username" class="block text-gray-700">Username</label>
+                        <label for="username" class="block text-red-600">Username</label>
                         <input type="text" id="username" name="username"
                             class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-800"
                             required>
                     </div>
                   
                     <div class="mb-4">
-                        <label for="login-password" class="block text-gray-700">Password</label>
+                        <label for="login-password" class="block text-red-600">Password</label>
                         <input type="password" id="login-password" name="password"
                             class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-800"
                             required>
@@ -50,11 +52,11 @@ function loginView(){
                     
                     <div class="mb-4">
                         <button name="login" type="submit"
-                            class="w-full bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-900">Connexion</button>
+                            class="w-full bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-900">Log In</button>
                     </div>
                   
                     <div class="text-center">
-                        <a href="#" class="text-blue-900 hover:underline">Forget Password ?</a>
+                        <a href="#" class="text-red-600 hover:underline">Forget Password ?</a>
                     </div>
                 </form>
             </section>

@@ -16,22 +16,30 @@ function landingView(){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" />
 </head>
 
-<body class="bg-gradient-to-r from-black to-blue-900">
+<body class="bg-gradient-to-r from-blue-900 via-black to-blue-900">
 
     
     
     ${headerView()};
-    <main class="flex justify-center w-full pt-2 pb-4">
-        <div class="bg-white shadow-md rounded-lg w-full max-w-lg min-w-max">
+    <header class="bg-gradient-to-r from-black via-blue-900 to-black h-16 border border-white py-2 mt-2">
 
-            <div class="flex justify-around flex-wrap bg-gray-200 p-4 rounded-t-lg">
+    <nav class="container flex justify-center mx-auto border-2 border-black font-bold text-center rounded-3xl p-1">
                 <form action="/login" method="GET">
-                    <button type="submit" id="login-btn" class="text-blue-800 font-semibold">Connexion</button>
+                    <button type="submit" id="login-btn" class="p-1 text-blue-800 font-semibold bg-gray-200 rounded-t-lg">Connexion</button>
                 </form>
                 <form action="/register" method="GET">    
-                    <button id="register-btn" class="text-blue-800 font-semibold">Registration</button>
+                    <button id="register-btn" class="ml-2 p-1 text-blue-800 font-semibold bg-gray-200 rounded-t-lg">Registration</button>
                 </form>
-            </div>
+    </nav>
+    </header>
+
+
+    <main class="flex justify-center w-full pt-2 pb-4">
+
+
+        <div class="bg-white shadow-md rounded-lg w-full max-w-lg min-w-max">
+
+            
 
             
           

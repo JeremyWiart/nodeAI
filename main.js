@@ -1,3 +1,4 @@
+const showHome = require('./Controllers/homeController');
 const showLanding = require('./Controllers/landingController');
 const {showLogin,showRegister,formLogin} = require('./Controllers/userController');
 const bodyParser = require('body-parser');
@@ -18,3 +19,7 @@ app.get('/login',showLogin);
 app.post('/login',formLogin);
 
 app.get('/register',showRegister);
+
+app.get('/', showHome);
+
+
