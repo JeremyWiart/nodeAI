@@ -12,7 +12,7 @@ function landingView(){
     <title>Vocal Assitant</title>
 
    
-    <link type="css" rel="stylesheet" href="./css/landingView.css" />
+    <link rel="stylesheet" href="/css/landingView.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" />
 </head>
 
