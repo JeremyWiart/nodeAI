@@ -22,7 +22,7 @@ function loginView(){
     
     ${headerView()};
     <main class="flex items-center justify-center p-48 mb-2 mt-2 rounded-lg">
-        <div class="bg-gradient-to-r from-black via-blue-900 to-black shadow-md rounded-lg w-full max-w-lg min-w-max">
+        <div class="bg-gradient-to-r from-black via-blue-900 to-black border border-white shadow-md rounded-lg w-full max-w-lg min-w-max">
 
             <div class="flex justify-around flex-wrap bg-gray-200 p-4 rounded-t-lg">
                 <form action="/register" methode="GET">
@@ -34,8 +34,8 @@ function loginView(){
             <section id="login-section" class="m-2 p-4">
 
                 <h2 class="text-2xl font-bold text-center text-red-600 mb-4 border border-red-600 rounded-lg p-1">Login</h2>
+
                 <form action="#" method="POST">
-         
                     <div class="mb-4">
                         <label for="username" class="block text-red-600">Username</label>
                         <input type="text" id="username" name="username"
@@ -59,6 +59,7 @@ function loginView(){
                         <a href="#" class="text-red-600 hover:underline">Forget Password ?</a>
                     </div>
                 </form>
+
             </section>
 
         </div>

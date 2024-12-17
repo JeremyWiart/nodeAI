@@ -1,8 +1,12 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+    content: ["./**/*.{html,js}"],
     theme: {
       extend: {
-        backgroundImage: {
-          'back_main': "url('/img/back_main.png')",
+        spacing: {
+          '100': '30rem',
+          '8xl': '96rem',
+          '9xl': '128rem',
         }
       }
     }

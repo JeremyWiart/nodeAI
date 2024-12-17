@@ -22,7 +22,7 @@ function registerView(){
     
     ${headerView()};
     <main class="flex items-center justify-center p-48 mb-2 mt-2 rounded-lg">
-        <div class="bg-gradient-to-r from-black via-blue-900 to-black shadow-md rounded-lg w-full max-w-lg min-w-max">
+        <div class="bg-gradient-to-r from-black via-blue-900 to-black shadow-md border border-white rounded-lg w-full max-w-lg min-w-max">
 
             <div class="flex justify-around flex-wrap bg-gray-200 p-4 rounded-t-lg">
                 <form action="/login" method="GET">

@@ -13,6 +13,7 @@ function landingView(){
 
    
     <link rel="stylesheet" href="/css/landingView.css" />
+    <link rel="stylesheet" href="/css/output.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" />
 </head>
 
@@ -34,14 +35,14 @@ function landingView(){
     </header>
 
 
-    <main class="flex justify-center w-full pt-2 pb-4">
+    <main class="flex justify-center items-center w-full">
 
 
-        <div class="bg-white shadow-md rounded-lg w-full max-w-lg min-w-max">
-
-            
+        <div class="bg-white shadow-md rounded-lg w-full max-w-lg min-w-max h-100">
 
             
+
+            bonjour
           
 
           
