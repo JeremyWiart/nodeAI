@@ -26,10 +26,10 @@ function landingView(){
     <header class="bg-gradient-to-r from-black via-blue-900 to-black h-16 border border-white py-2 mt-2">
 
     <nav class="container flex justify-center mx-auto border-2 border-black font-bold text-center rounded-3xl p-1">
-                <form action="/login" method="GET">
+                <form action="/Login" method="GET">
                     <button type="submit" id="login-btn" class="p-1 text-blue-800 font-semibold bg-gray-200 rounded-t-lg">Connexion</button>
                 </form>
-                <form action="/register" method="GET">    
+                <form action="/Register" method="GET">    
                     <button id="register-btn" class="ml-2 p-1 text-blue-800 font-semibold bg-gray-200 rounded-t-lg">Registration</button>
                 </form>
     </nav>

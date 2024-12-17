@@ -17,11 +17,11 @@ app.listen(3000, () => {
 
 app.get('/', showLanding);
 
-app.get('/login',showLogin);
-app.post('/login',formLogin);
+app.get('/Login',showLogin);
+app.post('/Login',formLogin);
 
-app.get('/register',showRegister);
+app.get('/Register',showRegister);
 
-app.get('/', showHome);
+app.get('/Home', showHome);
 
 

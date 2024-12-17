@@ -26,7 +26,7 @@ function registerView(){
         <div class="bg-gradient-to-r from-black via-blue-900 to-black shadow-md border border-white rounded-lg w-full max-w-lg min-w-max">
 
             <div class="flex justify-around flex-wrap bg-gray-200 p-4 rounded-t-lg">
-                <form action="/login" method="GET">
+                <form action="/Login" method="GET">
                     <button id="login-btn" class="text-blue-800 font-semibold">Connexion</button>
                 </form>
             </div>

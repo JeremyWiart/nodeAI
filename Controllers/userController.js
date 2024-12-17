@@ -26,7 +26,7 @@ function formLogin(req,res){
         } 
         
         if (row.length > 0) {
-            res.send(`Connexion réussie, bienvenue ${username}!`);
+            res.redirect('/Home');
           }else {
             res.send('Wrong password or username.');
           }

@@ -26,7 +26,7 @@ function loginView(){
         <div class="bg-gradient-to-r from-black via-blue-900 to-black border border-white shadow-md rounded-lg w-full max-w-lg min-w-max">
 
             <div class="flex justify-around flex-wrap bg-gray-200 p-4 rounded-t-lg">
-                <form action="/register" methode="GET">
+                <form action="/Register" methode="GET">
                     <button id="register-btn" class="text-blue-800 font-semibold">Registration</button>
                 </form>
             </div>
