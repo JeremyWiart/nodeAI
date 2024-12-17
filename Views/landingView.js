@@ -35,10 +35,10 @@ function landingView(){
     </header>
 
 
-    <main class="flex justify-center items-center w-full">
+    <main class="flex justify-center items-center w-full h-130">
 
 
-        <div class="bg-white shadow-md rounded-lg w-full max-w-lg min-w-max h-100">
+        <div class="bg-white shadow-md rounded-lg w-full max-w-lg min-w-max">
 
             
 
