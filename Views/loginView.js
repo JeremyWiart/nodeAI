@@ -1,4 +1,5 @@
 const headerView = require('./headerView');
+const footerView = require('./footerView');
 
 function loginView(){
 
@@ -61,9 +62,9 @@ function loginView(){
                 </form>
 
             </section>
-
         </div>
     </main>
+    ${footerView()}
 </body>
 
 </html>`;

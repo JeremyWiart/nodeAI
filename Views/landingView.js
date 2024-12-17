@@ -1,4 +1,5 @@
 const headerView = require('./headerView');
+const footerView = require('./footerView');
 
 function landingView(){
 
@@ -35,7 +36,7 @@ function landingView(){
     </header>
 
 
-    <main class="flex justify-center items-center w-full h-130">
+    <main class="flex justify-center items-center w-full h-126">
 
 
         <div class="bg-white shadow-md rounded-lg w-full max-w-lg min-w-max">
@@ -48,6 +49,7 @@ function landingView(){
           
         </div>
     </main>
+    ${footerView()}
 </body>
 
 </html>`;

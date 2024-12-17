@@ -1,4 +1,5 @@
 const headerView = require('./headerView');
+const footerView = require('./footerView');
 
 function registerView(){
 
@@ -20,7 +21,7 @@ function registerView(){
 
     
     
-    ${headerView()};
+    ${headerView()}
     <main class="flex items-center justify-center p-48 mb-2 mt-2 rounded-lg">
         <div class="bg-gradient-to-r from-black via-blue-900 to-black shadow-md border border-white rounded-lg w-full max-w-lg min-w-max">
 
@@ -70,6 +71,7 @@ function registerView(){
             </section>
         </div>
     </main>
+    ${footerView()}
 </body>
 
 </html>`;
