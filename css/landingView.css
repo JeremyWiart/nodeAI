@@ -1,0 +1,13 @@
+footer#footerBot{
+    background-color: #3533cd;
+ }
+ 
+ header#headerTop{
+    background-color: #3533cd;
+ }
+ 
+ main{
+    background-image: url('back_main.png');
+    background-repeat: no-repeat;
+    background-position: center;
+ }

@@ -12,7 +12,7 @@ function landingView(){
     <title>Vocal Assitant</title>
 
    
-    <!--<script src="https://cdn.tailwindcss.com"></script> -->
+    <link type="css" rel="stylesheet" href="./css/landingView.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" />
 </head>
 
@@ -20,7 +20,7 @@ function landingView(){
 
     
     
-    ${headerView()};
+    ${headerView()}
     <header class="bg-gradient-to-r from-black via-blue-900 to-black h-16 border border-white py-2 mt-2">
 
     <nav class="container flex justify-center mx-auto border-2 border-black font-bold text-center rounded-3xl p-1">

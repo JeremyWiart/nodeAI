@@ -2,10 +2,12 @@ const showHome = require('./Controllers/homeController');
 const showLanding = require('./Controllers/landingController');
 const {showLogin,showRegister,formLogin} = require('./Controllers/userController');
 const bodyParser = require('body-parser');
+const path = require('path');
 const express = require('express');
 const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'css')));
 
 
 
