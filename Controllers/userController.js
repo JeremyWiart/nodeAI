@@ -4,7 +4,7 @@ const verifyToken = require('../Middleware/authMiddle');
 const User = require('../Models/userModels');
 const db = require('../Bdd/db');
 const crypto = require('crypto')
-
+const jwt = require('jsonwebtoken');
 
 
 function showLogin(req,res){
@@ -19,7 +19,7 @@ function formLogin(req,res){
     
     const { username, password } = req.body;
     const shasum = crypto.createHash('sha1')
-     shasum.update(password);
+    shasum.update(password);
     const hashPassword = shasum.digest('hex');
     const user = new User( username, hashPassword );
 
@@ -34,7 +34,9 @@ function formLogin(req,res){
           return;
         } 
         if (row.length > 0) {
-            //const token = jwt.sign({ userId: user.username }, '2sd78AN2s6oP98T120a0az017', { expiresIn: '1h',});
+            const token = jwt.sign({ username: user.username }, '2sd78AN2s6oP98T120a0az017', { expiresIn: '30min',});
+            res.cookie('token', token, { httpOnly: true });
+            console.log(token); 
             res.redirect('/Home');
             res.end();
           }else {

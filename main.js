@@ -23,6 +23,6 @@ app.post('/Login',formLogin);
 
 app.get('/Register',showRegister);
 
-app.get('/Home', showHome);
+app.get('/Home', showHome,verifyToken );
 
 
