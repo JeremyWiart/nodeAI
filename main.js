@@ -1,6 +1,7 @@
 const showHome = require('./Controllers/homeController');
 const showLanding = require('./Controllers/landingController');
 const {showLogin,showRegister,formLogin} = require('./Controllers/userController');
+const verifyToken = require('./Middleware/authMiddle');
 const bodyParser = require('body-parser');
 const path = require('path');
 const express = require('express');
