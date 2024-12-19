@@ -1,7 +1,8 @@
 const headerView = require('./headerView');
 const footerView = require('./footerView');
+const errorlogView = require('./errorlogView');
 
-function loginView(){
+function loginView(errorLog){
 
     return `<!DOCTYPE html>
 <html lang="fr">
@@ -55,6 +56,7 @@ function loginView(){
                         <button name="login" type="submit"
                             class="w-full bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-900">Log In</button>
                     </div>
+                    ${errorLog ? errorlogView() : errorLog=false}
                   
                     <div class="text-center">
                         <a href="#" class="text-red-600 hover:underline">Forget Password ?</a>

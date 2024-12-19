@@ -7,7 +7,8 @@ const jwt = require('jsonwebtoken');
 
 
 function showLogin(req,res){
-    res.send(loginView());
+    const errorLog = false;
+    res.send(loginView(errorLog));
 }
 
 function showRegister(req,res){
@@ -40,10 +41,12 @@ function formLogin(req,res){
               path: '/'
           });
             //console.log(token); 
-            res.redirect('/Home');
+            res.redirect(301,'/Home');
            
           }else {
-            res.send('Wrong password or username.');
+            const errorLog = true;
+            res.send(loginView(errorLog));
+            
           }
 
         }); 
