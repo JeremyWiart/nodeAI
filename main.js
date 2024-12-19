@@ -1,14 +1,19 @@
 const showHome = require('./Controllers/homeController');
 const showLanding = require('./Controllers/landingController');
-const {showLogin,showRegister,formLogin} = require('./Controllers/userController');
+const {showLogin,showRegister,formLogin,logout} = require('./Controllers/userController');
 const verifyToken = require('./Middleware/authMiddle');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const path = require('path');
 const express = require('express');
 const app = express();
 
+
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json());
+app.use(cookieParser());
 
 
 
@@ -17,12 +22,16 @@ app.listen(3000, () => {
 });
 
 app.get('/', showLanding);
+app.get('/home', verifyToken,showHome );
+
 
 app.get('/Login',showLogin);
 app.post('/Login',formLogin);
 
 app.get('/Register',showRegister);
 
-app.get('/Home', showHome,verifyToken );
+app.get('/Logout', logout );
+
+
 
 
