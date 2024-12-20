@@ -47,7 +47,7 @@ function homeView(req){
             </section>
              <section id="section_3" class="border-2 border-red-600 rounded-md bg-black py-2 px-2 w-80">
                 <div id="div_3" class="border-2 border-green-400 rounded-md h-full py-2 px-2">
-                    <article id="article_3" class="bg-gradient-to-r from-blue-900 via-black to-blue-900 rounded-md border-2 border-red-600 h-1/4 text-center flex-col justify-center py-2 px-2">
+                    <article id="article_3" class="bg-gradient-to-r from-blue-900 via-black to-blue-900 rounded-md border-2 border-red-600 h-40 text-center flex-col justify-center py-2 px-2">
                         <h1 class="text-white font-bold border border-red-600 w-full rounded-lg mb-2">Account</h1>
                             ${userView(req)}
                     </article>
