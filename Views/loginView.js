@@ -23,7 +23,7 @@ function loginView(errorLog){
     
     
     ${headerView()};
-    <main class="flex items-center justify-center p-48 mb-2 mt-2 rounded-lg">
+    <main class="flex items-center justify-center mb-2 rounded-lg">
         <div class="bg-gradient-to-r from-black via-blue-900 to-black border border-white shadow-md rounded-lg w-full max-w-lg min-w-max">
 
             <div class="flex justify-around flex-wrap bg-gray-200 p-4 rounded-t-lg">
@@ -56,7 +56,7 @@ function loginView(errorLog){
                         <button name="login" type="submit"
                             class="w-full bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-900">Log In</button>
                     </div>
-                    ${errorLog ? errorlogView() : errorLog=false}
+                    ${errorLog ? errorlogView() : errorLog=[] }
                   
                     <div class="text-center">
                         <a href="#" class="text-red-600 hover:underline">Forget Password ?</a>

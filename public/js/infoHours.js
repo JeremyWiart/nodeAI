@@ -10,7 +10,7 @@ function afficherHeure() {
   
   console.log(final); 
   
-  document.getElementById('infoHours').textContent = final;
+  document.getElementById('infoHours').textContent = `LocalTime : ${final}`;
 }
 
 // Mettre à jour chaque seconde

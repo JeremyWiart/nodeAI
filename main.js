@@ -1,5 +1,6 @@
-const showHome = require('./Controllers/homeController');
 const showLanding = require('./Controllers/landingController');
+const showHome = require('./Controllers/homeController');
+const showAccount = require('./Controllers/accountController');
 const {showLogin,showRegister,formLogin,logout} = require('./Controllers/userController');
 const verifyToken = require('./Middleware/authMiddle');
 const bodyParser = require('body-parser');
@@ -23,7 +24,7 @@ app.listen(3000, () => {
 
 app.get('/', showLanding);
 app.get('/home', verifyToken,showHome );
-
+app.get('/Account',verifyToken,showAccount);
 
 app.get('/Login',showLogin);
 app.post('/Login',formLogin);
