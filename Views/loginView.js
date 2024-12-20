@@ -37,7 +37,7 @@ function loginView(errorLog){
 
                 <h2 class="text-2xl font-bold text-center text-red-600 mb-4 border border-red-600 rounded-lg p-1">Login</h2>
 
-                <form action="#" method="POST">
+                <form action="/Login" method="POST">
                     <div class="mb-4">
                         <label for="username" class="block text-red-600">Username</label>
                         <input type="text" id="username" name="username"
