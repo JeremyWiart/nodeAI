@@ -2,9 +2,10 @@ const headerView = require('./headerView');
 const navbarView = require('./navbarView');
 const footerView = require('./footerView');
 const userView = require('./userView');
+const errorChangePwdView = require('./error/errorChangePwdView');
 
 
-function accountView(req){
+function accountView(req,errorChangePwd){
 
     return `<!DOCTYPE html>
 <html lang="fr">
@@ -61,7 +62,7 @@ function accountView(req){
                                 <form action="/Account" method="POST">
                                     <div class="mb-4">
                                         <lable for="oldPassword" class="block text-white">Old Password</label>
-                                        <input type="password" id="oldPassword" name="OldPassword" class="w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-900" />
+                                        <input type="password" id="oldPassword" name="oldPassword" class="w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-900" />
                                     </div>
                                     <div class="mb-4">
                                         <lable for="newPassword" class="block text-white">New Password</label>
@@ -75,7 +76,31 @@ function accountView(req){
                                         <button type="submit" name="changePwd" class="w-full bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-900">Change Password</button>
                                     </div>
                                 </form>
+                                ${errorChangePwd ? errorChangePwdView() : errorChangePwd=[]}
                             </section>
+
+                            <section id="email-section" class="m-2 p-4 hidden">
+                                <form action="/Account" method="POST">
+                                    <div class="mb-4">
+                                        <lable for="oldEmail" class="block text-white">Old Email</label>
+                                        <input type="email" id="oldEmail" name="OldEmail" class="w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-900" />
+                                    </div>
+                                    <div class="mb-4">
+                                        <lable for="newEmail" class="block text-white">New Email</label>
+                                        <input type="email" id="newEmail" name="newEmail" class="w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-900" />
+                                    </div>
+                                    <div class="mb-4">
+                                        <lable for="rpNewEmail" class="block text-white">Repeat New Email</label>
+                                        <input type="email" id="rpNewEmail" name="rpNewEmail" class="w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-900" />
+                                    </div>
+                                    <div class="mb-4">
+                                        <button type="submit" name="changeEmail" class="w-full bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-900">Change Email</button>
+                                    </div>
+                                </form>
+                            </section>
+
+
+
                             </div>
                     </article>
 

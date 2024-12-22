@@ -29,8 +29,6 @@ function formLogin(req,res){
         if (err) {
           console.error('Request error', err);
           res.status(500).send('Server error');
-          console.log(user.hashPassword);
-          
           return;
         } 
         if (row.length > 0) {
