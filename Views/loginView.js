@@ -1,6 +1,6 @@
 const headerView = require('./headerView');
 const footerView = require('./footerView');
-const errorlogView = require('./error/errorlogView');
+const errorlogView = require('./errorViews/errorlogView');
 
 function loginView(errorLog){
 

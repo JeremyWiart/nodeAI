@@ -2,10 +2,11 @@ const headerView = require('./headerView');
 const navbarView = require('./navbarView');
 const footerView = require('./footerView');
 const userView = require('./userView');
-const errorChangePwdView = require('./error/errorChangePwdView');
+const errorChangePwdView = require('./errorViews/errorChangePwdView');
+const okChangePwdView = require('./okViews/okChangePwdView');
 
 
-function accountView(req,errorChangePwd){
+function accountView(req,errorChangePwd,okChangePwd){
 
     return `<!DOCTYPE html>
 <html lang="fr">
@@ -77,6 +78,7 @@ function accountView(req,errorChangePwd){
                                     </div>
                                 </form>
                                 ${errorChangePwd ? errorChangePwdView() : errorChangePwd=[]}
+                                ${okChangePwd ? okChangePwdView() : okChangePwd=[]}
                             </section>
 
                             <section id="email-section" class="m-2 p-4 hidden">
