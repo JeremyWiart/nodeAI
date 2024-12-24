@@ -22,7 +22,6 @@ function formChangePassword(req,res){
         const hashPassword = shasum2.digest('hex');
         const hashNewPassword = shasum3.digest('hex');
     
-   
         if(hashPassword == hashNewPassword){
             const queryS = `SELECT * FROM user WHERE username = ? AND password = ?`;
             db.query(queryS,  [req.username.username, password],  (err, row) => {
@@ -53,8 +52,7 @@ function formChangePassword(req,res){
             const okChangePwd = false;
             const errorChangePwd = true;
             res.send(accountView(req.username,errorChangePwd,okChangePwd));
-        }
-    
+        } 
 }
 
 module.exports = {showAccount,formChangePassword};
