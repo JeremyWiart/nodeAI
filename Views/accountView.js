@@ -3,10 +3,11 @@ const navbarView = require('./navbarView');
 const footerView = require('./footerView');
 const userView = require('./userView');
 const errorChangePwdView = require('./errorViews/errorChangePwdView');
+const errorChangeEmailView = require('./errorViews/errorChangeEmailView');
 const okChangePwdView = require('./okViews/okChangePwdView');
 
 
-function accountView(req,errorChangePwd,okChangePwd){
+function accountView(req,errorChangePwd,okChangePwd,errorChangeEmail){
 
     return `<!DOCTYPE html>
 <html lang="fr">
@@ -60,7 +61,7 @@ function accountView(req,errorChangePwd,okChangePwd){
                             
 
                             <section id="pwd-section" class="m-2 p-4">
-                                <form action="/Account" method="POST">
+                                <form action="/AccountPwd" method="POST">
                                     <div class="mb-4">
                                         <lable for="oldPassword" class="block text-white">Old Password</label>
                                         <input type="password" id="oldPassword" name="oldPassword" class="w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-900" />
@@ -74,7 +75,7 @@ function accountView(req,errorChangePwd,okChangePwd){
                                         <input type="password" id="rpNewPassword" name="rpNewPassword" class="w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-900" />
                                     </div>
                                     <div class="mb-4">
-                                        <button type="submit" name="changePwd" class="w-full bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-900">Change Password</button>
+                                        <button type="submit" name="changePwd" value="pwd" class="w-full bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-900">Change Password</button>
                                     </div>
                                 </form>
                                 ${errorChangePwd ? errorChangePwdView() : errorChangePwd=[]}
@@ -96,9 +97,10 @@ function accountView(req,errorChangePwd,okChangePwd){
                                         <input type="email" id="rpNewEmail" name="rpNewEmail" class="w-full px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-900" />
                                     </div>
                                     <div class="mb-4">
-                                        <button type="submit" name="changeEmail" class="w-full bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-900">Change Email</button>
+                                        <button type="submit" name="changeEmail" value="email" class="w-full bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-900">Change Email</button>
                                     </div>
                                 </form>
+                                 ${errorChangeEmail ? errorChangeEmailView() : errorChangeEmail=[]}
                             </section>
 
 

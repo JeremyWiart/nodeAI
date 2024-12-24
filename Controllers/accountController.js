@@ -6,7 +6,8 @@ const db = require('../Bdd/db');
 function showAccount(req,res){
     const errorChangePwd = false;
     const okChangePwd = false;
-    res.send(accountView(req.username,errorChangePwd,okChangePwd));
+    const errorChangeEmail = false;
+    res.send(accountView(req.username,errorChangePwd,okChangePwd,errorChangeEmail));
 }
 
 
@@ -55,4 +56,40 @@ function formChangePassword(req,res){
         } 
 }
 
-module.exports = {showAccount,formChangePassword};
+
+function formChangeEmail(req,res){
+    const {oldEmail, newEmail,rpNewEmail } = req.body;
+        if(newEmail == rpNewEmail){
+            const queryS = `SELECT * FROM user WHERE username = ? AND email = ?`;
+            db.query(queryS,  [req.username.username, oldEmail],  (err, row) => {
+                if (err) {
+                console.error('Request error', err);
+                res.status(500).send('Server error');
+                return;
+                } 
+                    if (row.length > 0) {
+                        const queryU = `UPDATE user SET email = ? WHERE username = ?`
+                         db.query(queryU, [newEmail , req.username.username], (err,row) => {
+                            if (err) {
+                                    console.error('Request error', err);
+                                    res.status(500).send('Server error');
+                                    return;
+                            }
+                                const okChangePwd = true;
+                                const errorChangeEmail = false;
+                                res.send(accountView(req.username,errorChangeEmail));
+                            });
+                        }else {
+                            const okChangePwd = false;
+                            const errorChangeEmail = true;
+                            res.send(accountView(req.username,errorChangeEmail));
+                        }
+                }); 
+            
+        }else{
+            const okChangePwd = false;
+            const errorChangeEmail = true;
+            res.send(accountView(req.username,errorChangeEmail));
+        }
+}
+module.exports = {showAccount,formChangePassword,formChangeEmail};

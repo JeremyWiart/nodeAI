@@ -1,6 +1,6 @@
 const showLanding = require('./Controllers/landingController');
 const showHome = require('./Controllers/homeController');
-const {showAccount,formChangePassword} = require('./Controllers/accountController');
+const {showAccount,formChangePassword,formChangeEmail} = require('./Controllers/accountController');
 const {showLogin,showRegister,formLogin,logout} = require('./Controllers/userController');
 const verifyToken = require('./Middleware/authMiddle');
 const bodyParser = require('body-parser');
@@ -27,7 +27,10 @@ app.get('/', showLanding);
 app.get('/home', verifyToken,showHome );
 
 app.get('/Account',verifyToken,showAccount);
-app.post('/Account', verifyToken,formChangePassword)
+app.post('/AccountEmail', verifyToken,formChangeEmail)
+app.post('/AccountPwd',verifyToken, formChangePassword)
+  
+
 
 app.get('/Login',showLogin);
 app.post('/Login',formLogin);
